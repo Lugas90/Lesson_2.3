@@ -1,4 +1,4 @@
-public class Transport implements ServiceStationCheck {
+public abstract class Transport implements ServiceStationCheck {
 
     private String modelName;
 
@@ -26,9 +26,6 @@ public class Transport implements ServiceStationCheck {
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
-    @Override
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        ServiceStationCheck.super.check(car, bicycle, truck);
-    }
+
 }
 
